@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendify Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Form 
+    <div class="login-form" id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button onclick="login()">Login</button>
+    </div>-->
+
+    <!-- Header -->
+    <div class="header" id="header" >
+        <h1><b>Trendify Mart</b></h1>
+        <input type="text" id="search-box" placeholder="Search for products, brands and more..." oninput="searchProducts()">
+        <div class="cart-icon" id="cart-icon" onclick="viewCart()">
+            🛒
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+
+    <!-- Sliding Images -->
+    <div class="carousel" id="carousel" >
+        <img src="image1.jpg" alt="Offer 1" class="active">
+        <img src="image2.jpg" alt="Offer 2">
+        <img src="image3.jpg" alt="Offer 3">
+    </div>
+
+    <!-- Offers Section -->
+    <div class="offers" id="offers" >
+        <h2>Special Offers</h2>
+        <p>Flat 50% off on selected products. Hurry up!</p>
+    </div>
+
+    <!-- Product List -->
+    <div class="container" id="product-list" >
+        <!-- Products will be dynamically added here -->
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">×</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">
+                <h3>Total: ₹<span id="cart-total-price">0.00</span></h3>
+            </div>
+            <div class="payment-options">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method" onchange="showPaymentDetails()">
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="online">Online Payment</option>
+                </select>
+            </div>
+            <div id="payment-details"></div>
+            <div id="delivery-time" style="margin-top: 1rem;"></div>
+            <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+</body>
+</html>
