@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 .header {
-background-color: #2874f0;
+background-color: #d708f3;
 color: white;
 padding: 1rem;
 position: sticky;
@@ -190,7 +190,7 @@ width: 100%;
 max-width: 400px;
 margin: 5rem auto;
 padding: 2rem;
-background-color: #ffffff;
+background-color: #9e478a8e;
 border-radius: 10px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 text-align: center;
