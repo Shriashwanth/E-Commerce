@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="trendify.css">
+    
     <title>Trendify Mart</title>
 </head>
 <body>
@@ -16,9 +18,9 @@
 
     <!-- Header -->
     <div class="header" id="header" style="display: none;">
-        <h1><b>Trendify Mart</b></h1>
+        <h1>Trendify Mart</h1>
         <input type="text" id="search-box" placeholder="Search for products, brands and more..." oninput="searchProducts()">
-        <div class="cart-icon" id="cart-icon" onclick="viewCart()">
+        <div class="cart-icon" id="cart-icon"  onclick="viewCart()">
             🛒
             <div class="cart-count" id="cart-count">0</div>
         </div>
@@ -26,9 +28,9 @@
 
     <!-- Sliding Images -->
     <div class="carousel" id="carousel" style="display: none;">
-        <img src="image1.jpg" alt="Offer 1" class="active">
-        <img src="image2.jpg" alt="Offer 2">
-        <img src="image3.jpg" alt="Offer 3">
+        <img src="header1.jpg" alt="Offer 1" class="active">
+        <img src="header2.jpg" alt="Offer 2">
+        <img src="header3.jpg" alt="Offer 3">
     </div>
 
     <!-- Offers Section -->
@@ -61,6 +63,15 @@
             <div id="payment-details"></div>
             <div id="delivery-time" style="margin-top: 1rem;"></div>
             <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+    <div id="product-modal" class="product-modal">
+        <div class="product-modal-content">
+            <span class="close" onclick="closeProductModal()">×</span>
+            <h2 id="product-modal-title"></h2>
+            <table>
+                <tbody id="product-details-table"></tbody>
+            </table>
         </div>
     </div>
 </body>
