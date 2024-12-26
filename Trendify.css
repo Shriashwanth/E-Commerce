@@ -100,7 +100,7 @@ border-radius: 50%;
     color: #ff9800;
 }
 .product button {
-    background-color: #2874f0;
+    background-color: #001e4d;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -190,7 +190,7 @@ width: 100%;
 max-width: 400px;
 margin: 5rem auto;
 padding: 2rem;
-background-color: #0fd52db7;
+background-color: #3f3a4fb7;
 border-radius: 10px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 text-align: center;
