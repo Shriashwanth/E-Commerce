@@ -110,39 +110,71 @@ const products = [
         
                 
         
-                function placeOrder() {
-                    const paymentMethod = document.getElementById("payment-method").value;
-                    const deliveryTimeDiv = document.getElementById("delivery-time");
+        function placeOrder() {
+            const paymentMethod = document.getElementById("payment-method").value;
+            const deliveryTimeDiv = document.getElementById("delivery-time");
         
-                    if (cart.length === 0) {
-                        alert("Your cart is empty. Please add items to your cart.");
-                        return;
-                    }
+            // Prompt user for address and mobile number
+            const userAddress = prompt("Enter your delivery address:");
+            if (!userAddress) {
+                alert("Address is required to proceed.");
+                return;
+            }
         
-                    if (paymentMethod === "cod") {
-                        const address = document.getElementById("address").value;
-                        const pinCode = document.getElementById("pincode").value;
+            const userMobile = prompt("Enter your mobile number (10 digits):");
+            if (!/^\d{10}$/.test(userMobile)) {
+                alert("Mobile number must contain exactly 10 digits.");
+                return;
+            }
         
-                        if (!address || !pinCode) {
-                            alert("Please provide a valid address and pin code.");
-                            return;
-                        }
-                        deliveryTimeDiv.textContent = "Estimated Delivery Time: 5-7 Days";
-                    } else if (paymentMethod === "online") {
-                        const cardNumber = document.getElementById("card-number").value;
-                        const cardExpiry = document.getElementById("card-expiry").value;
-                        const cardCVV = document.getElementById("card-cvv").value;
-        
-                        if (!cardNumber || !cardExpiry || !cardCVV) {
-                            alert("Please provide complete card details.");
-                            return;
-                        }
-                        deliveryTimeDiv.textContent = "Estimated Delivery Time: 3-5 Days";
-                    }
-        
-                    alert("Order placed successfully!");
-                    closeCart();
+            if (paymentMethod === "cod") {
+                // Cash on Delivery
+                alert("You have chosen Cash on Delivery.");
+                deliveryTimeDiv.textContent = "Estimated Delivery Time: 5-7 Days";
+            } else if (paymentMethod === "online") {
+                // Online Payment Details
+                const cardNumber = prompt("Enter your card number (16 digits):");
+                if (!/^\d{16}$/.test(cardNumber)) {
+                    alert("Card number must contain exactly 16 digits.");
+                    return;
                 }
+        
+                const cardExpiry = prompt("Enter your card expiry date (MM/YY):");
+                if (!/^\d{2}\/\d{2}$/.test(cardExpiry)) {
+                    alert("Card expiry date must be in the format MM/YY.");
+                    return;
+                }
+        
+                const cardCVV = prompt("Enter your card CVV (3 digits):");
+                if (!/^\d{3}$/.test(cardCVV)) {
+                    alert("Card CVV must contain exactly 3 digits.");
+                    return;
+                }
+        
+                alert(`Payment successful! 
+                Card Number: **** **** **** ${cardNumber.slice(-4)}`);
+                deliveryTimeDiv.textContent = "Estimated Delivery Time: 3-5 Days";
+            } else {
+                alert("Invalid payment method selected.");
+                return;
+            }
+        
+            alert(`Order placed successfully! 
+            Address: ${userAddress}
+            Mobile: ${userMobile}`);
+        
+            // Clear the cart after placing the order
+            cart = [];
+            updateCartCount();
+        
+            // Refresh the cart modal
+            viewCart();
+        
+            // Close the cart modal
+            closeCart();
+        }
+        
+                
         
                 function showProductDetails(product) {
             const modal = document.getElementById("product-modal");
