@@ -1,10 +1,10 @@
 const products = [
-    { id: 1, name: "Clothes", price: 899.00, image: "box1-1.jpg", description: "High quality cotton clothes.", rating: 4.5, reviews: ["Great product!", "Very comfortable.", "Good value for money."] },
-    { id: 2, name: "Shoes", price: 1499.00, image: "box1-2.jpg", description: "Stylish and comfortable shoes.", rating: 4.0, reviews: ["Nice fit.", "Slightly tight, but good quality."] },
-    { id: 3, name: "Watch", price: 2499.00, image: "box1-3.jpg", description: "Elegant watch with leather strap.", rating: 4.7, reviews: ["Beautiful design.", "Perfect for gifting."] },
-    { id: 4, name: "Bag", price: 1299.00, image: "box1-4.jpg", description: "Spacious and durable bag.", rating: 4.2, reviews: ["Perfect for everyday use.", "Very spacious."] },
-    { id: 5, name: "Mobile", price: 22999.00, image: "box2-1.jpg", description: "Smartphone with latest features.", rating: 4.8, reviews: ["Excellent performance.", "Battery lasts long."] },
-    { id: 6, name: "Laptop", price: 59999.00, image: "box2-2.jpg", description: "High performance laptop for work and gaming.", rating: 4.9, reviews: ["Fast and efficient.", "Great for gaming."] }
+    { id: 1, name: "Samsung S24", price: 124000.00, image: "mobile.jpg", description: "High Quality Camera with meatl body", rating: 4.5, reviews: ["Great product!", "Very comfortable.", "Good value for money."] },
+    { id: 2, name: "IPad", price: 99999.00, image: "ipad.jpg", description: "Limited Edition IPad-13", rating: 4.0, reviews: ["Nice fit.", "Slightly tight, but good quality."] },
+    { id: 3, name: "Gaming HeadSet", price: 4499.00, image: "headphone.jpg", description: "Five Different Modes of sound available", rating: 4.7, reviews: ["Beautiful design.", "Perfect for gifting."] },
+    { id: 4, name: "IronFlask", price: 1200.00, image: "flask.jpg", description: "Long Lasting Premium Flask", rating: 4.2, reviews: ["Perfect for everyday use.", "Very spacious."] },
+    { id: 5, name: "Helmet", price: 950.00, image: "helmet.jpg", description: "Size adjustable", rating: 4.8, reviews: ["Excellent performance.", "Battery lasts long."] },
+    { id: 6, name: "Dumbells", price: 729.00, image: "dumbells.jpg", description: "10lb 1-pair Dumbells", rating: 4.9, reviews: ["Fast and efficient.", "Great for gaming."] }
 ];
 
 
